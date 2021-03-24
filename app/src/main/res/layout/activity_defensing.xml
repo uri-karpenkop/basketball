@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@drawable/bsk3"
+    >
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_gravity="left"
+        android:id="@+id/btnBack"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:text="defensing"
+        android:textSize="50sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical"
+        android:text="1. mark a distance of ten meters. and run this distance as fast as tou can twice in a row"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical"
+        android:text="2. Put one cone in the middle and four in alcoves from it.  You need to run in defense steps as fast as possible from the middle cone to the first cone and from there back to the middle and from there to the second and so on to the third and fourth and finally finish in the middle"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical"
+        android:text="3. most squat in 1 minutes"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="vertical"
+        android:text="3. most lance in 1 minutes"
+        android:textSize="20sp"
+        />
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="done"
+        android:layout_gravity="right"
+        android:id="@+id/btnDone"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        />
+
+
+
+
+
+</LinearLayout>
