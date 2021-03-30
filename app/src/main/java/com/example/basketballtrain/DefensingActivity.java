@@ -1,12 +1,12 @@
 package com.example.basketballtrain;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.basketballtrain.db.DefensingWorkoutHelper;
-import com.example.basketballtrain.db.ShootingWorkoutHelper;
 import com.example.basketballtrain.workouts.DefensingWorkout;
-import com.example.basketballtrain.workouts.ShootingWorkout;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -53,6 +53,14 @@ public class DefensingActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if (v == btnDone) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(DefensingActivity.this);
+                    builder.setTitle("End of Workout");
+                    builder.setMessage("Are you sure you want to end this workout?");
+                    builder.setCancelable(true);
+                    builder.setPositiveButton("Yes", new HandleAlertDialogListener());
+                    builder.setNegativeButton("No", new HandleAlertDialogListener());
+                    AlertDialog dialog=builder.create();
+                    dialog.show();
                     startActivityForResult(new Intent(DefensingActivity.this, DefensingSurvyActivity.class), 0);
 
                 }
@@ -87,5 +95,15 @@ public class DefensingActivity extends AppCompatActivity {
         Log.i(this.getClass().getName(), "The id for the workout is: " + defensingWorkout.getId());
         finish();
     }
+
+    public  class  HandleAlertDialogListener implements DialogInterface.OnClickListener
+    {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+
+            if (which == -1) {
+                startActivityForResult(new Intent(DefensingActivity.this, ShootingSurvyActivity.class), 0);
+            }
+        }
 
 }
