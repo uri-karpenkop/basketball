@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
+        android:textColor="@android:color/background_dark"
         android:text="defensing"
         android:textSize="50sp"
         />

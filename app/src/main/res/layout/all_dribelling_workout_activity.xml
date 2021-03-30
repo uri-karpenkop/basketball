@@ -22,6 +22,7 @@
         android:orientation="vertical"
         android:text="Dribelling Workouts"
         android:textSize="40dp"
+        android:textColor="@android:color/background_dark"
         />
     <ListView
         android:layout_width="match_parent"

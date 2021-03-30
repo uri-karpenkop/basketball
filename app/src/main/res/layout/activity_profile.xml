@@ -16,6 +16,7 @@
         android:orientation="vertical"
         android:text="create account "
         android:textSize="50sp"
+        android:textColor="@android:color/background_dark"
         />
     <EditText
         android:layout_width="300dp"

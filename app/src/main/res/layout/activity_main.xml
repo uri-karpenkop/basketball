@@ -16,6 +16,7 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:text="Hello !"
+        android:textColor="@android:color/background_dark"
         android:textSize="50sp"
 
         />

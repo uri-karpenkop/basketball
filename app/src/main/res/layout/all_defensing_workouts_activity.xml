@@ -23,6 +23,7 @@
         android:orientation="vertical"
         android:text="Defensing workouts"
         android:textSize="40dp"
+        android:textColor="@android:color/background_dark"
         />
     <ListView
         android:layout_width="match_parent"
