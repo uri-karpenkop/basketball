@@ -53,9 +53,10 @@ public class ShootingWorkout extends BaseWorkout {
 
     @Override
     public String getDescription() {
-        return "This is the Shooting desc\n" + "" +
-                "1\n" +
-                "2\n";
+        return "Shoot 10 times from tree\n" + "" +
+                "Shoot 10 inside the paint\n" +
+                "Shoot 10 free throw \n" +
+                " Shoot 10 drive throw";
 
     }
 }

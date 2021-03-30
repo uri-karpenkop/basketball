@@ -13,9 +13,12 @@ import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 public class DefensingActivity extends AppCompatActivity {
 
     Button btnBack , btnDone;
+    TextView tvWarmUpDescription, tvWorkoutDescription;
     DefensingWorkoutHelper dbHelper;
 
 
@@ -26,6 +29,13 @@ public class DefensingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_defensing);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
+        DefensingWorkout defensingWorkout = new DefensingWorkout();
+        tvWarmUpDescription.setText(defensingWorkout.getWarmUpDescription());
+
+        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
+        tvWorkoutDescription.setText(defensingWorkout.getDescription());
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
