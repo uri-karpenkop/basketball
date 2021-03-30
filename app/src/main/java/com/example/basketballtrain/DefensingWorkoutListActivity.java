@@ -1,6 +1,8 @@
 package com.example.basketballtrain;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 public class DefensingWorkoutListActivity extends AppCompatActivity {
 
     ListView lv;
+    Button btnBack;
     ArrayList<DefensingWorkout> defensingWorkouts;
     DefensingWorkoutAdapter defensingWorkoutAdapter;
 
@@ -23,6 +26,16 @@ public class DefensingWorkoutListActivity extends AppCompatActivity {
         setContentView(R.layout.all_defensing_workouts_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        btnBack = (Button) findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if (v == btnBack) {
+                    finish();
+                }
+            }
+        });
 
         defensingWorkouts = getAllDefensingWorkouts();
 
