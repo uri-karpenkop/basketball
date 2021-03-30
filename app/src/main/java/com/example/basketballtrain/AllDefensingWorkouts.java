@@ -22,7 +22,6 @@ public class AllDefensingWorkouts extends AppCompatActivity {
                     finish();
                 }
             }
-
         });
     }
 }
