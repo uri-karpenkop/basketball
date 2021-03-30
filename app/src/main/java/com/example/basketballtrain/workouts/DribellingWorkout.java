@@ -53,6 +53,9 @@ public class DribellingWorkout extends BaseWorkout {
 
     @Override
     public String getDescription() {
-        return "This is the Dribbling desc";
+        return "1. spider train for 3 minutes\n" +
+                "2. bounce the ball in a slalom between your legs for 3 minutes.\n" +
+                "3.bounce the ball and throw up the tennis ball in the other hand. change hand after 3 minutes\n" +
+                "4.run as fast as you can while bouncing the ball and look to the other side you are from the hand you bounce of. do this 10 times.";
     }
 }
