@@ -30,7 +30,7 @@ public class DefensingWorkoutAdapter extends ArrayAdapter<DefensingWorkout> {
         View view = layoutInflater.inflate(R.layout.defensing_workout,parent,false);
         TextView tvDefensing = (TextView)view.findViewById(R.id.tvDefensing);
         DefensingWorkout workout = objects.get(position);
-        String oneLine = "ID: " + workout.getId() + " ten times four " + workout.getTenTInesFour();
+        String oneLine = "ID: " + workout.getId() + " ten times four: " + workout.getTenTInesFour() + " Slant " + workout.getSlant() +" Squat: " + workout.getSquat() + " lance: " + workout.getLance();
         tvDefensing.setText(String.valueOf(oneLine));
         return view;
     }

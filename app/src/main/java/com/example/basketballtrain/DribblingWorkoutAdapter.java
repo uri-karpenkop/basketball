@@ -30,7 +30,7 @@ public class DribblingWorkoutAdapter extends ArrayAdapter<DribellingWorkout> {
         View view = layoutInflater.inflate(R.layout.dribelling_workout,parent,false);
         TextView tvShooting = (TextView)view.findViewById(R.id.tvShooting);
         DribellingWorkout workout = objects.get(position);
-        String oneLine = "ID: " + workout.getId() + " 3 Throw: " + workout.getSpider();
+        String oneLine = "ID: " + workout.getId() + " spider: " + workout.getSpider() + " Slalom: " + workout.getSlalom() + " Running: " + workout.getRunning() + " Tennis ball: " + workout.getTennisBall();
         tvShooting.setText(String.valueOf(oneLine));
         return view;
     }

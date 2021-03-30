@@ -58,18 +58,6 @@
             android:name=".HighestRecordsActivity"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".AllShootingWorkouts"
-            android:label="@string/title_activity_home_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".AllDefensingWorkouts"
-            android:label="@string/title_activity_home_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".AllDribellingWorkouts"
-            android:label="@string/title_activity_home_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".ProfileActivity"

@@ -30,7 +30,7 @@ public class ShootingWorkoutAdapter extends ArrayAdapter<ShootingWorkout> {
         View view = layoutInflater.inflate(R.layout.shooting_workout,parent,false);
         TextView tvShooting = (TextView)view.findViewById(R.id.tvShooting);
         ShootingWorkout workout = objects.get(position);
-        String oneLine = "ID: " + workout.getId() + " 3 Throw: " + workout.getThreeThrow();
+        String oneLine = "ID: " + workout.getId() + " 3 Throw: " + workout.getThreeThrow() +" Paint throw: "+ workout.getInsidePaintThrow() + " Free throw: " + workout.getFreeThrow() + " Drive Throw: " + workout.getDriveThrow();
         tvShooting.setText(String.valueOf(oneLine));
         return view;
     }
