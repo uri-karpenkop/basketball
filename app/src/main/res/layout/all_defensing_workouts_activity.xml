@@ -5,6 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical">
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_gravity="left"
+        android:id="@+id/btnBack"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

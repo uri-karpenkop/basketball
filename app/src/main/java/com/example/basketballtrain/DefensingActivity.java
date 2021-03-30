@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 public class DefensingActivity extends AppCompatActivity {
 
-    Button btnBack , btnDone;
+    Button btnBack, btnDone;
     TextView tvWarmUpDescription, tvWorkoutDescription;
     DefensingWorkoutHelper dbHelper;
 
@@ -30,12 +30,12 @@ public class DefensingActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
-        DefensingWorkout defensingWorkout = new DefensingWorkout();
-        tvWarmUpDescription.setText(defensingWorkout.getWarmUpDescription());
-
-        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
-        tvWorkoutDescription.setText(defensingWorkout.getDescription());
+//        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
+//        DefensingWorkout defensingWorkout = new DefensingWorkout();
+//        tvWarmUpDescription.setText(defensingWorkout.getWarmUpDescription());
+//
+//        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
+//        tvWorkoutDescription.setText(defensingWorkout.getDescription());
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -59,9 +59,8 @@ public class DefensingActivity extends AppCompatActivity {
                     builder.setCancelable(true);
                     builder.setPositiveButton("Yes", new HandleAlertDialogListener());
                     builder.setNegativeButton("No", new HandleAlertDialogListener());
-                    AlertDialog dialog=builder.create();
+                    AlertDialog dialog = builder.create();
                     dialog.show();
-                    startActivityForResult(new Intent(DefensingActivity.this, DefensingSurvyActivity.class), 0);
 
                 }
             }
@@ -96,14 +95,14 @@ public class DefensingActivity extends AppCompatActivity {
         finish();
     }
 
-    public  class  HandleAlertDialogListener implements DialogInterface.OnClickListener
-    {
+    public class HandleAlertDialogListener implements DialogInterface.OnClickListener {
         @Override
         public void onClick(DialogInterface dialog, int which) {
 
             if (which == -1) {
-                startActivityForResult(new Intent(DefensingActivity.this, ShootingSurvyActivity.class), 0);
+                startActivityForResult(new Intent(DefensingActivity.this, DefensingSurvyActivity.class), 0);
             }
         }
 
+    }
 }
