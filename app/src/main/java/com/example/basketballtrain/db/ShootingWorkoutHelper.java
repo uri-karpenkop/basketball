@@ -71,32 +71,4 @@ public class ShootingWorkoutHelper extends WorkoutDBHelper  {
         }
         return workouts;
     }
-
-    public Double get3PointAvg() {
-        String query = "select avg(" + COLUMN_THREE_THROW +  ") from " + TABLE_SHOOTING_WORKOUTS ;
-
-        Cursor cursor=database.rawQuery(query,null);
-
-        if(cursor.getCount()>0)
-        {
-            cursor.moveToNext();
-            return cursor.getDouble(0);
-        }
-
-        return 0.0;
-    }
-
-    public Double get3PointBest() {
-        String query = "select max(" + COLUMN_THREE_THROW +  ") from " + TABLE_SHOOTING_WORKOUTS ;
-
-        Cursor cursor=database.rawQuery(query,null);
-
-        if(cursor.getCount()>0)
-        {
-            cursor.moveToNext();
-            return cursor.getDouble(0);
-        }
-
-        return 0.0;
-    }
 }

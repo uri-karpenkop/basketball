@@ -1,6 +1,7 @@
 package com.example.basketballtrain.db;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -35,5 +36,33 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
     {
         database=this.getWritableDatabase();
         Log.i(this.getClass().getName(), "Database connection open");
+    }
+
+    public Double getAvg(String columnName, String tableName) {
+        String query = "select avg(" + columnName +  ") from " + tableName ;
+
+        Cursor cursor=database.rawQuery(query,null);
+
+        if(cursor.getCount()>0)
+        {
+            cursor.moveToNext();
+            return cursor.getDouble(0);
+        }
+
+        return 0.0;
+    }
+
+    public Double getBest(String columnName, String tableName) {
+        String query = "select max(" + columnName +  ") from " + tableName ;
+
+        Cursor cursor=database.rawQuery(query,null);
+
+        if(cursor.getCount()>0)
+        {
+            cursor.moveToNext();
+            return cursor.getDouble(0);
+        }
+
+        return 0.0;
     }
 }

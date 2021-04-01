@@ -24,41 +24,27 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:textColor="@android:color/background_dark"
-        android:text="defensing"
+        android:text="Defensing"
         android:textSize="50sp"
         />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:id="@+id/tvWarmUpDescription"
+        android:layout_width="393dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
-        android:text="1. mark a distance of ten meters. and run this distance as fast as tou can twice in a row"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
+
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:id="@+id/tvWorkoutDescription"
+        android:layout_width="394dp"
+        android:layout_height="259dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
-        android:text="2. Put one cone in the middle and four in alcoves from it.  You need to run in defense steps as fast as possible from the middle cone to the first cone and from there back to the middle and from there to the second and so on to the third and fourth and finally finish in the middle"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical"
-        android:text="3. most squat in 1 minutes"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical"
-        android:text="3. most lance in 1 minutes"
-        android:textSize="20sp"
-        />
+        android:layout_margin="20dp"
+        android:text=""
+        android:textSize="20sp" />
 
 
     <Button

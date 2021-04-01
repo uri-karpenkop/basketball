@@ -35,12 +35,12 @@ public class DribellingActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
-//        DribellingWorkout dribellingWorkout = new DribellingWorkout();
-//        tvWarmUpDescription.setText(dribellingWorkout.getWarmUpDescription());
-//
-//        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
-//        tvWorkoutDescription.setText(dribellingWorkout.getDescription());
+        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
+        DribellingWorkout dribellingWorkout = new DribellingWorkout();
+        tvWarmUpDescription.setText(dribellingWorkout.getWarmUpDescription());
+
+        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
+        tvWorkoutDescription.setText(dribellingWorkout.getDescription());
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {

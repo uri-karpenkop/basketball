@@ -119,5 +119,65 @@
             android:layout_marginEnd="10dp"
             />
     </TableRow>
-   </TableLayout>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+        <TextView
+            android:text="free throw"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="60dp"
+            />
+        <TextView
+            android:id="@+id/tvFreeThrowAvg"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+        <TextView
+            android:text="/"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvFreeThrowBest"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+        </TableRow>
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+
+        <TextView
+            android:text="drive throw"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="60dp"
+            />
+        <TextView
+            android:id="@+id/tvDriveThrowAvg"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+        <TextView
+            android:text="/"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvDriveThrowBest"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginEnd="10dp"
+            />
+    </TableRow>
+    </TableLayout>
 </LinearLayout>

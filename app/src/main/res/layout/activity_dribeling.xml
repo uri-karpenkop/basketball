@@ -28,38 +28,23 @@
         android:textColor="@android:color/background_dark"
         />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
+        android:id="@+id/tvWarmUpDescription"
+        android:layout_width="393dp"
+        android:layout_height="96dp"
+        android:layout_gravity="center"
         android:orientation="vertical"
-        android:text="1. spider train for 3 minutes"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical"
-        android:text="2. bounce the ball in a slalom between your legs for 3 minutes."
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical"
-        android:text="3.bounce the ball and throw up the tennis ball in the other hand. chnge hand after 3 minutes"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="vertical"
-        android:text="4.run as fast as you can while bouncing the ball and look to the other side you are from the hand you bounce of. do this 10 times."
-        android:textSize="20sp"
-        />
+        android:textSize="20sp" />
 
+
+    <TextView
+        android:id="@+id/tvWorkoutDescription"
+        android:layout_width="394dp"
+        android:layout_height="259dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:text=""
+        android:textSize="20sp" />
 
 
 

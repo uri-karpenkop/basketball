@@ -30,12 +30,12 @@ public class DefensingActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
-//        DefensingWorkout defensingWorkout = new DefensingWorkout();
-//        tvWarmUpDescription.setText(defensingWorkout.getWarmUpDescription());
-//
-//        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
-//        tvWorkoutDescription.setText(defensingWorkout.getDescription());
+        tvWarmUpDescription = findViewById(R.id.tvWarmUpDescription);
+        DefensingWorkout defensingWorkout = new DefensingWorkout();
+        tvWarmUpDescription.setText(defensingWorkout.getWarmUpDescription());
+
+        tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
+        tvWorkoutDescription.setText(defensingWorkout.getDescription());
 
         btnBack = (Button) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
