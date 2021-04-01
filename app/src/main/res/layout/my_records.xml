@@ -179,5 +179,245 @@
             android:layout_marginEnd="10dp"
             />
     </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="spider"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvSpiderAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSpiderBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="slalom"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvSlalomAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSlalomBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="tennis ball"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvTennisBallAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvTennisBallBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="running"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvRunningAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvRunningBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="10 times 4"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvTenTimesFourAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvTenTimesFourBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="slant"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvSlantAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSlantBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="squat"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvSquatAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvSquatBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="lance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvLanceAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvLanceBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+        </TableRow>
     </TableLayout>
 </LinearLayout>
