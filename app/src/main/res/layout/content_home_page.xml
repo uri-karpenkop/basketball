@@ -47,16 +47,5 @@
         android:layout_marginTop="10dp"
         android:background="@android:drawable/editbox_dropdown_dark_frame"
         />
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="go to statistic"
-        android:layout_gravity="center"
-        android:id="@+id/btnStatistic"
-        android:textSize="10sp"
-        android:layout_marginTop="10dp"
-        android:background="@android:drawable/editbox_dropdown_dark_frame"
-        />
-
 
 </LinearLayout>

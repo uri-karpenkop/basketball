@@ -34,6 +34,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         sp = getSharedPreferences("profile",0);
         etUserName = (EditText)findViewById(R.id.etUsername);
+        etUserName.setText(sp.getString("userName", null));
+
         etFirstName = (EditText)findViewById(R.id.etFirstName);
         etLastName = (EditText)findViewById(R.id.etLastName);
         etEmail = (EditText)findViewById(R.id.etEmail);
@@ -57,7 +59,13 @@ public class ProfileActivity extends AppCompatActivity {
                 editor.putString("newPassword", etNewPassword.getText().toString());
                 editor.putString("confirmPassword", etConfirmPassword.getText().toString());
                 editor.commit();
-                setContentView(R.layout.activity_home_page);
+
+//                if (getIntent().getStringExtra("from") == "MainActivity") {
+//
+//                }
+
+                ProfileActivity.this.finish();
+
             }
         });
 
