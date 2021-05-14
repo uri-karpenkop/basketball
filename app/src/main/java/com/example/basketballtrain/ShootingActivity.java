@@ -91,7 +91,23 @@ public class ShootingActivity extends AppCompatActivity {
         dbHelper.createShootingWorkout(shootingWorkout);
         dbHelper.close();
 
+
         Log.i(this.getClass().getName(), "The id for the workout is: " + shootingWorkout.getId());
+
+
+
+        String []emails = {"uri.karpenkop@gmail.com"};
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_EMAIL,emails );
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+        intent.putExtra(Intent.EXTRA_TEXT, "I'm email body.");
+        startActivity(Intent.createChooser(intent, "Send Email"));
+
+
+
+
         finish();
     }
 

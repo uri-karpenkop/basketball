@@ -116,7 +116,7 @@ public class HomePageActivity extends AppCompatActivity {
             int batteryLevel = intent.getIntExtra("level",0);
             Log.d(this.getClass().getName(), "----- The battery level is : " + batteryLevel);
 
-            if (batteryLevel <= 10 && batteryToastCounter < 2) {
+            if (batteryLevel <= 30 && batteryToastCounter < 2) {
                 batteryToastCounter++;
                 CharSequence text = "Battery is low, Please consider charging your device before starting a new Workout!";
                 int duration = Toast.LENGTH_SHORT;
