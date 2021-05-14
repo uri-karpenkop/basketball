@@ -58,7 +58,18 @@
             android:name=".HighestRecordsActivity"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
+        <activity
+            android:name=".PushupsActivity"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+        android:name=".PushupsSurvyActivity"
+        android:label="@string/title_activity_home_page"
+        android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".PushupsWorkoutListActivity"
+            android:label="@string/title_activity_home_page"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"

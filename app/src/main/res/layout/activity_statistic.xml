@@ -61,6 +61,16 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:text="All Pushups Workout"
+        android:layout_gravity="left"
+        android:id="@+id/btnAllPushups"
+        android:textSize="10sp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
         android:text="Highest Record"
         android:layout_gravity="left"
         android:id="@+id/btnHighestRecords"

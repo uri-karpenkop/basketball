@@ -21,7 +21,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class HomePageActivity extends AppCompatActivity {
-    Button  btnShooting, btnDefensing, btnDriblling;
+    Button  btnShooting, btnDefensing, btnDriblling, btnPushups;
     BroadCastBattery broadCastBattery;
     int batteryToastCounter = 0;
 
@@ -63,6 +63,16 @@ public class HomePageActivity extends AppCompatActivity {
                 if(v == btnDriblling){
                     startActivity(new Intent(HomePageActivity.this, DribellingActivity.class));
 
+                }
+            }
+
+        });
+        btnPushups = (Button) findViewById(R.id.btnPushups);
+        btnPushups.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if(v == btnPushups){
+                    startActivity(new Intent(HomePageActivity.this, PushupsActivity.class));
                 }
             }
 

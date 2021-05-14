@@ -24,6 +24,7 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
         db.execSQL(ShootingWorkoutHelper.CREATE_TABLE_WORKOUTS);
         db.execSQL(DefensingWorkoutHelper.CREATE_TABLE_WORKOUTS);
         db.execSQL(DribellingWorkoutHelper.CREATE_TABLE_WORKOUTS);
+        db.execSQL(PushupsWorkoutHelper.CREATE_TABLE_WORKOUTS);
         Log.i(this.getClass().getName(), "All tables were created");
     }
 

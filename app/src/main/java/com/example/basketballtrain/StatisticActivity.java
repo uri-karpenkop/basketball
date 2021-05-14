@@ -15,7 +15,7 @@ import android.widget.Button;
 public class StatisticActivity extends AppCompatActivity {
 
     Button btnBack ;
-    Button btnAllShooting , btnAllDribelling , btnAllDefensing , btnHighestRecords;
+    Button btnAllShooting , btnAllDribelling , btnAllDefensing , btnAllPushups, btnHighestRecords;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,16 @@ public class StatisticActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (v == btnAllDefensing) {
                     startActivity(new Intent(StatisticActivity.this, DefensingWorkoutListActivity.class));
+                }
+            }
+        });
+
+        btnAllPushups = (Button) findViewById(R.id.btnAllPushups);
+        btnAllPushups.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                if (v == btnAllPushups) {
+                    startActivity(new Intent(StatisticActivity.this, PushupsWorkoutListActivity.class));
                 }
             }
         });
