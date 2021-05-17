@@ -3,6 +3,9 @@ package com.example.basketballtrain;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Messenger;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +23,7 @@ import com.example.basketballtrain.workouts.PushupWorkout;
 public class PushupsActivity extends AppCompatActivity {
 
     Button btnBack, btnStart;
-    TextView tvWorkoutDescription;
+    TextView tvWorkoutDescription, tvTimer;
     PushupsWorkoutHelper dbHelper;
 
 
@@ -32,9 +35,10 @@ public class PushupsActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        PushupWorkout pushupWorkout = new PushupWorkout();
+        final PushupWorkout pushupWorkout = new PushupWorkout();
 
         tvWorkoutDescription = findViewById(R.id.tvWorkoutDescription);
+        tvTimer = findViewById(R.id.tvTimer);
         tvWorkoutDescription.setText(pushupWorkout.getDescription());
 
         btnBack = (Button) findViewById(R.id.btnBack);
@@ -53,9 +57,13 @@ public class PushupsActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if (v == btnStart) {
-                   // start timer
+                   // start timer with handler and messenger
+                    // https://stackoverflow.com/questions/7871521/how-to-collect-info-from-intentservice-and-update-android-ui
 
-                    startActivityForResult(new Intent(PushupsActivity.this, PushupsSurvyActivity.class), 0);
+                    Intent intent  = new Intent(PushupsActivity.this, TimerIntentService.class);
+                    intent.putExtra("counter", PushupWorkout.PRIOD_OF_TIME_IN_MINUTES * 60);
+                    intent.putExtra("messenger", new Messenger(handler));
+                    startService(intent);
 
                 }
             }
@@ -81,4 +89,17 @@ public class PushupsActivity extends AppCompatActivity {
         Log.i(this.getClass().getName(), "The id for the workout is: " + pushupWorkout.getId());
         finish();
     }
+
+    Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            Bundle reply = msg.getData();
+            int seconds = reply.getInt("timer");
+            String secondsPaddedWithZeros = String.format("%02d", seconds);
+            tvTimer.setText("00:" + secondsPaddedWithZeros);
+            if (seconds == 0 ) {
+                startActivityForResult(new Intent(PushupsActivity.this, PushupsSurvyActivity.class), 0);
+            }
+        }
+    };
 }
