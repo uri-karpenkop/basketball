@@ -25,6 +25,8 @@ public class PushupsActivity extends AppCompatActivity {
     Button btnBack, btnStart;
     TextView tvWorkoutDescription, tvTimer;
     PushupsWorkoutHelper dbHelper;
+    Intent intent;
+    boolean backBtnClicked = false;
 
 
     @Override
@@ -46,21 +48,28 @@ public class PushupsActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if (v == btnBack) {
+                    backBtnClicked = true;
+                    if (intent != null) {
+                        stopService(intent);
+                    }
                     finish();
                 }
             }
 
         });
 
+        // button START Timer
         btnStart = (Button) findViewById(R.id.btnStart);
         btnStart.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 if (v == btnStart) {
+                    backBtnClicked = false;
+
                    // start timer with handler and messenger
                     // https://stackoverflow.com/questions/7871521/how-to-collect-info-from-intentservice-and-update-android-ui
 
-                    Intent intent  = new Intent(PushupsActivity.this, TimerIntentService.class);
+                    intent  = new Intent(PushupsActivity.this, TimerIntentService.class);
                     intent.putExtra("counter", PushupWorkout.PRIOD_OF_TIME_IN_MINUTES * 60);
                     intent.putExtra("messenger", new Messenger(handler));
                     startService(intent);
@@ -97,7 +106,7 @@ public class PushupsActivity extends AppCompatActivity {
             int seconds = reply.getInt("timer");
             String secondsPaddedWithZeros = String.format("%02d", seconds);
             tvTimer.setText("00:" + secondsPaddedWithZeros);
-            if (seconds == 0 ) {
+            if (seconds == 0 && backBtnClicked == false ) {
                 startActivityForResult(new Intent(PushupsActivity.this, PushupsSurvyActivity.class), 0);
             }
         }

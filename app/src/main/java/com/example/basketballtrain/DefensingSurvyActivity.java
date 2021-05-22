@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class DefensingSurvyActivity extends AppCompatActivity {
 
@@ -36,22 +37,27 @@ public class DefensingSurvyActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if(v == btnSubmit){
-                    Integer numberOfTenTimesFour =  Integer.parseInt(etTenTimesFour.getText().toString());
-                    Intent result = new Intent();
-                    result.putExtra("numberOfTenTimesFour", numberOfTenTimesFour);
+                    try {
+                        Integer numberOfTenTimesFour = Integer.parseInt(etTenTimesFour.getText().toString());
+                        Intent result = new Intent();
+                        result.putExtra("numberOfTenTimesFour", numberOfTenTimesFour);
 
-                    Integer numberOfSlant =  Integer.parseInt(etSlant.getText().toString());
-                    result.putExtra("numberOfSlant", numberOfSlant);
+                        Integer numberOfSlant = Integer.parseInt(etSlant.getText().toString());
+                        result.putExtra("numberOfSlant", numberOfSlant);
 
-                    Integer numberOfSquat =  Integer.parseInt(etSquat.getText().toString());
-                    result.putExtra("numberOfSquat", numberOfSquat);
+                        Integer numberOfSquat = Integer.parseInt(etSquat.getText().toString());
+                        result.putExtra("numberOfSquat", numberOfSquat);
 
-                    Integer numberOfLance =  Integer.parseInt(etLance.getText().toString());
-                    result.putExtra("numberOfLance", numberOfLance);
+                        Integer numberOfLance = Integer.parseInt(etLance.getText().toString());
+                        result.putExtra("numberOfLance", numberOfLance);
 
-                    setResult(Activity.RESULT_OK, result);
+                        setResult(Activity.RESULT_OK, result);
 
-                    finish();
+                        finish();
+                    } catch(Exception e) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "All fields are mandatory.", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
                 }
             }
 

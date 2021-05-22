@@ -12,6 +12,9 @@ import android.widget.Toast;
 public class TimerIntentService extends IntentService {
 
 
+    boolean shouldRun = true;
+
+
     public TimerIntentService() {
         super("TimerIntentService");
         Log.d("timer", "constructor Timer service called");
@@ -27,12 +30,14 @@ public class TimerIntentService extends IntentService {
         Bundle bundle = intent.getExtras();
         if (bundle != null) {
             Messenger messenger = (Messenger) bundle.get("messenger");
-            while (counter > 0) {
+            while (counter > 0 && shouldRun) {
                 try {
                     counter--;
                     Message msg = Message.obtain();
                     bundle.putInt("timer", counter);
                     msg.setData(bundle); //put the data here
+
+                    // sending message to handler
                     messenger.send(msg);
                     Thread.sleep(1000);
                     Log.d("timer", "counter=" + counter);
@@ -50,6 +55,7 @@ public class TimerIntentService extends IntentService {
 
     public void onDestroy() {
         super.onDestroy();
+        shouldRun = false;
         Toast.makeText(this, "destory service", Toast.LENGTH_LONG).show();
     }
 

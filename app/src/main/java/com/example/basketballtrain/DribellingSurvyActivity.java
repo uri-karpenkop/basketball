@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class DribellingSurvyActivity extends AppCompatActivity {
 
@@ -36,22 +37,27 @@ public class DribellingSurvyActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if(v == btnSubmit){
-                    Integer spider =  Integer.parseInt(etSpider.getText().toString());
-                    Intent result = new Intent();
-                    result.putExtra("numberOfTimesBallEscapedSpider", spider);
+                    try {
+                        Integer spider = Integer.parseInt(etSpider.getText().toString());
+                        Intent result = new Intent();
+                        result.putExtra("numberOfTimesBallEscapedSpider", spider);
 
-                    Integer slalom =  Integer.parseInt(etSlalom.getText().toString());
-                    result.putExtra("numberOfTimesBallEscapedSlalom", slalom);
+                        Integer slalom = Integer.parseInt(etSlalom.getText().toString());
+                        result.putExtra("numberOfTimesBallEscapedSlalom", slalom);
 
-                    Integer tennisBall =  Integer.parseInt(etTennisBall.getText().toString());
-                    result.putExtra("numberOfTimesBallEscapedTennisBall", tennisBall);
+                        Integer tennisBall = Integer.parseInt(etTennisBall.getText().toString());
+                        result.putExtra("numberOfTimesBallEscapedTennisBall", tennisBall);
 
-                    Integer running =  Integer.parseInt(etRunning.getText().toString());
-                    result.putExtra("numberOfTimesBallEscapedRunning", running);
+                        Integer running = Integer.parseInt(etRunning.getText().toString());
+                        result.putExtra("numberOfTimesBallEscapedRunning", running);
 
-                    setResult(Activity.RESULT_OK, result);
+                        setResult(Activity.RESULT_OK, result);
+                        finish();
+                    } catch(Exception e) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "All fields are mandatory.", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
 
-                    finish();
                 }
             }
 

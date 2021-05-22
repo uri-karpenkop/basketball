@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,13 +29,18 @@ public class PushupsSurvyActivity extends AppCompatActivity {
 
             public void onClick(View v) {
                 if(v == btnSubmit){
-                    Integer numOfPushups =  Integer.parseInt(etNumOfPushups.getText().toString());
-                    Intent result = new Intent();
-                    result.putExtra("numOfPushups", numOfPushups);
+                    try {
+                        Integer numOfPushups = Integer.parseInt(etNumOfPushups.getText().toString());
+                        Intent result = new Intent();
+                        result.putExtra("numOfPushups", numOfPushups);
 
-                    setResult(Activity.RESULT_OK, result);
+                        setResult(Activity.RESULT_OK, result);
 
-                    finish();
+                        finish();
+                    } catch(Exception e) {
+                        Toast toast = Toast.makeText(getApplicationContext(), "All fields are mandatory.", Toast.LENGTH_LONG);
+                        toast.show();
+                    }
                 }
             }
 

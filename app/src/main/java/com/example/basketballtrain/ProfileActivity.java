@@ -59,6 +59,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         etPhoneNumber = (EditText)findViewById(R.id.etPhoneNumber);
         ivProfile = (ImageView) findViewById(R.id.ivProfile);
 
+        // get all fields from sp (if exists)
         String userName = sp.getString("userName", "");
         String firstName = sp.getString("firstName", "");
         String lastName = sp.getString("lastName", "");
@@ -66,28 +67,31 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String phoneNumber = sp.getString("phoneNumber", "");
         pathToPic = sp.getString("photo", null);
 
+        // create new profile object from fields
         Profile userProfile = new Profile(userName, firstName, lastName, email, phoneNumber, pathToPic);
 
 
+        // set fields with data
         etUserName.setText(userProfile.getUserName());
         etFirstName.setText(userProfile.getFirstName());
         etLastName.setText(userProfile.getLastName());
         etEmail.setText(userProfile.getEmail());
         etPhoneNumber.setText(userProfile.getPhoneNumber());
 
+        // if has picture load it
         if (userProfile.getPathToPicture() != null) {
             loadImageFromStorage(userProfile.getPathToPicture());
         }
 
-
         btnTakePic = (Button)findViewById(R.id.btnTakePic);
         btnTakePic.setOnClickListener(this);
 
+        // save
         btnCreateProfile = (Button) findViewById(R.id.btnCreateProfile);
         btnCreateProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("TEST", "------ clicked !!!! ----------" );
+                // get all data from screen and save to shared preferences
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putString("userName", etUserName.getText().toString());
                 editor.putString("firstName", etFirstName.getText().toString());
@@ -97,6 +101,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                 if (pathToPic != null) {
                     editor.putString("photo", pathToPic);
                 }
+                //save
                 editor.commit();
 
 //                if (getIntent().getStringExtra("from") == "MainActivity") {
@@ -124,18 +129,25 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // result return from taking picture
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==0)//coming from camera
         {
             if(resultCode==RESULT_OK)
             {
+                // get bitmap from intent
                 bitmap= (Bitmap)data.getExtras().get("data");
+
+                // save bitmap to ImageView
                 ivProfile.setImageBitmap(bitmap);
+
+                // save bitmap to file
                 pathToPic = saveToInternalStorage(bitmap);
             }
         }
     }
 
+    // save bitmap to file
     private String saveToInternalStorage(Bitmap bitmapImage){
         ContextWrapper cw = new ContextWrapper(getApplicationContext());
         // path to /data/data/yourapp/app_data/imageDir
@@ -160,6 +172,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         return directory.getAbsolutePath();
     }
 
+    // load bitmap from file
     private void loadImageFromStorage(String path)
     {
 

@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ShootingSurvyActivity extends AppCompatActivity {
 
@@ -37,23 +38,29 @@ EditText etNumOfThreeShoot , etNumOfShootsPaint , etNumOfShootsFreeThrow , etNum
 
          public void onClick(View v) {
        if(v == btnSubmit){
+           Intent result = new Intent();
 
-          Integer numberOfThreeShoots =  Integer.parseInt(etNumOfThreeShoot.getText().toString());
-          Intent result = new Intent();
-          result.putExtra("numberOfThreeShoots", numberOfThreeShoots);
+           try {
+               Integer numberOfThreeShoots = Integer.parseInt(etNumOfThreeShoot.getText().toString());
+               result.putExtra("numberOfThreeShoots", numberOfThreeShoots);
 
-           Integer numberOfPaintShoots =  Integer.parseInt(etNumOfShootsPaint.getText().toString());
-           result.putExtra("numberOfPaintShoots", numberOfPaintShoots);
+               Integer numberOfPaintShoots = Integer.parseInt(etNumOfShootsPaint.getText().toString());
+               result.putExtra("numberOfPaintShoots", numberOfPaintShoots);
 
-           Integer numberOfFreeThrow =  Integer.parseInt(etNumOfShootsFreeThrow.getText().toString());
-           result.putExtra("numberOfFreeThrow", numberOfFreeThrow);
+               Integer numberOfFreeThrow = Integer.parseInt(etNumOfShootsFreeThrow.getText().toString());
+               result.putExtra("numberOfFreeThrow", numberOfFreeThrow);
 
-           Integer numberOfExtensionsShoots =  Integer.parseInt(etNumOfShootsExtensions.getText().toString());
-           result.putExtra("numberOfExtensionsShoots", numberOfExtensionsShoots);
+               Integer numberOfExtensionsShoots = Integer.parseInt(etNumOfShootsExtensions.getText().toString());
+               result.putExtra("numberOfExtensionsShoots", numberOfExtensionsShoots);
 
-           setResult(Activity.RESULT_OK, result);
+               setResult(Activity.RESULT_OK, result);
+               finish();
 
-           finish();
+           } catch(Exception e) {
+               Toast toast = Toast.makeText(getApplicationContext(), "All fields are mandatory.", Toast.LENGTH_LONG);
+               toast.show();
+           }
+
        }
            }
 
