@@ -80,12 +80,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
 
 
-
-        etFirstName = (EditText)findViewById(R.id.etFirstName);
-        etLastName = (EditText)findViewById(R.id.etLastName);
-        etEmail = (EditText)findViewById(R.id.etEmail);
-        etPhoneNumber = (EditText)findViewById(R.id.etPhoneNumber );
-
         btnTakePic = (Button)findViewById(R.id.btnTakePic);
         btnTakePic.setOnClickListener(this);
 
@@ -117,6 +111,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
+
+    // TAKE PICTURE button
     public void onClick(View v)
     {
         if(v==btnTakePic)

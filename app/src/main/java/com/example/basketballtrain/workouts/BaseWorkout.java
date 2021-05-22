@@ -17,8 +17,8 @@ public abstract class BaseWorkout {
     public String getWarmUpDescription() {
         return "WARM UP:\n" +
                 " easy run\n" +
-                "running whit knees to chest\n" +
-                "running whit heels to breech\n" +
+                "running with knees to chest\n" +
+                "running with heels to breech\n" +
                 "head, shoulders, wrist, waist, knee rotations\n" +
                 "";
     }

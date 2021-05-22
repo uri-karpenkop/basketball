@@ -2,12 +2,14 @@ package com.example.basketballtrain;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.basketballtrain.db.DefensingWorkoutHelper;
 import com.example.basketballtrain.db.DribellingWorkoutHelper;
+import com.example.basketballtrain.db.PushupsWorkoutHelper;
 import com.example.basketballtrain.db.ShootingWorkoutHelper;
 import com.example.basketballtrain.db.WorkoutDBHelper;
 
@@ -17,6 +19,7 @@ public class HighestRecordsActivity extends AppCompatActivity {
     TextView tv3PointAvg, tv3PointBest, tvPaintThrowAvg, tvPaintThrowBest, tvFreeThrowAvg, tvFreeThrowBest, tvDriveThrowAvg, tvDriveThrowBest;
     TextView  tvSpiderAvg, tvSpiderBest, tvSlalomAvg, tvSlalomBest, tvTennisBallAvg, tvTennisBallBest, tvRunningAvg, tvRunningBest;
     TextView tvTenTimesFourAvg, tvTenTimesFourBest, tvSlantAvg, tvSlantBest, tvSquatAvg, tvSquatBest, tvLanceAvg, tvLanceBest;
+    TextView tvPushUpAvg, tvPushUpBest;
     WorkoutDBHelper dbHelper;
 
     @Override
@@ -131,6 +134,15 @@ public class HighestRecordsActivity extends AppCompatActivity {
         tvLanceBest = (TextView)findViewById(R.id.tvLanceBest);
         Double lanceBest = getBest(DefensingWorkoutHelper.COLUMN_LANCE, DefensingWorkoutHelper.TABLE_DEFENSING_WORKOUTS);
         tvLanceBest.setText(String.format("%.2f", lanceBest));
+
+        tvPushUpAvg = (TextView)findViewById(R.id.tvPushUpAvg);
+        Double pushUpAvg = getAvg(PushupsWorkoutHelper.COLUMN_NUM_OF_PUSHUPS, PushupsWorkoutHelper.TABLE_PUSHUPS_WORKOUTS);
+        tvPushUpAvg.setText(String.format("%.2f", pushUpAvg));
+
+        tvPushUpBest = (TextView)findViewById(R.id.tvPushUpBest);
+        Double pushUpBest = getBest(PushupsWorkoutHelper.COLUMN_NUM_OF_PUSHUPS, PushupsWorkoutHelper.TABLE_PUSHUPS_WORKOUTS);
+        tvPushUpBest.setText(String.format("%.2f", pushUpBest));
+
 
 
 

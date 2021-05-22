@@ -5,26 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
         android:text="My Records "
-        android:textSize="50sp"
         android:textColor="@android:color/background_dark"
-        />
+        android:textSize="50sp" />
 
     <Button
+        android:id="@+id/btnBack"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="back"
         android:layout_gravity="left"
-        android:id="@+id/btnBack"
-        android:textSize="10sp"
         android:layout_marginTop="10dp"
         android:background="@android:drawable/editbox_dropdown_dark_frame"
-        />
+        android:text="back"
+        android:textSize="10sp" />
 
 
     <TableLayout
@@ -418,6 +417,38 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_marginEnd="10dp"
                 />
+
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dip" >
+
+            <TextView
+                android:text="pushUp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="60dp"
+                />
+            <TextView
+                android:id="@+id/tvPushUpAvg"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:text="/"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tvPushUpBest"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginEnd="10dp"
+                />
+
         </TableRow>
     </TableLayout>
 </LinearLayout>

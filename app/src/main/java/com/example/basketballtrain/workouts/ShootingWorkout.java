@@ -56,7 +56,7 @@ public class ShootingWorkout extends BaseWorkout {
         return "Shoot 10 times from tree\n" + "" +
                 "Shoot 10 inside the paint\n" +
                 "Shoot 10 free throw \n" +
-                " Shoot 10 drive throw";
+                "Shoot 10 drive throw";
 
     }
 }

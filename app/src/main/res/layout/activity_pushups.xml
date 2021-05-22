@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
-    android:background="@drawable/bsk3"
+    android:background= "@color/cardview_dark_background"
+
+
     >
     <Button
         android:layout_width="50dp"
@@ -15,7 +17,7 @@
         android:id="@+id/btnBack"
         android:textSize="10sp"
         android:layout_marginTop="10dp"
-        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         />
 
     <TextView
@@ -23,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@android:color/background_light"
         android:text="Pushups"
         android:textSize="50sp"
         />
@@ -36,6 +38,7 @@
         android:layout_gravity="center"
         android:orientation="vertical"
         android:layout_margin="20dp"
+        android:textColor="@android:color/background_light"
         android:text=""
         android:textSize="20sp" />
 
@@ -48,7 +51,7 @@
         android:id="@+id/btnStart"
         android:textSize="10sp"
         android:layout_marginTop="10dp"
-        android:background="@android:drawable/editbox_dropdown_dark_frame"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
         />
 
     <TextView
@@ -60,6 +63,7 @@
         android:layout_margin="20dp"
         android:text="01:00"
         android:textAlignment="center"
+        android:textColor="@android:color/background_light"
         android:textStyle="bold"
         android:textSize="40sp" />
 
