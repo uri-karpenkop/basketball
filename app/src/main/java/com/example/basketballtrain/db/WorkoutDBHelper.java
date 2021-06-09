@@ -47,6 +47,7 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0)
         {
             cursor.moveToNext();
+            // I have only one result . so return.
             return cursor.getDouble(0);
         }
 
@@ -61,6 +62,7 @@ public class WorkoutDBHelper extends SQLiteOpenHelper {
         if(cursor.getCount()>0)
         {
             cursor.moveToNext();
+            // I have only one result . so return.
             return cursor.getDouble(0);
         }
 

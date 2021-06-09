@@ -28,12 +28,15 @@ EditText etNumOfThreeShoot , etNumOfShootsPaint , etNumOfShootsFreeThrow , etNum
         setSupportActionBar(toolbar);
 
 
+        // find all fields on screen
         etNumOfThreeShoot = (EditText) findViewById(R.id.etNumOfThreeShoot);
         etNumOfShootsPaint = (EditText) findViewById(R.id.etNumOfShootsPaint);
         etNumOfShootsFreeThrow = (EditText) findViewById(R.id.etNumOfShootsFreeThrow);
         etNumOfShootsExtensions = (EditText) findViewById(R.id.etNumOfShootsExtensions);
 
         btnSubmit = (Button) findViewById(R.id.btnSubmit);
+
+        // when click on submit button
         btnSubmit.setOnClickListener(new View.OnClickListener() {
 
          public void onClick(View v) {
@@ -41,7 +44,9 @@ EditText etNumOfThreeShoot , etNumOfShootsPaint , etNumOfShootsFreeThrow , etNum
            Intent result = new Intent();
 
            try {
+               // get data from screen
                Integer numberOfThreeShoots = Integer.parseInt(etNumOfThreeShoot.getText().toString());
+               // save data to result intent
                result.putExtra("numberOfThreeShoots", numberOfThreeShoots);
 
                Integer numberOfPaintShoots = Integer.parseInt(etNumOfShootsPaint.getText().toString());
@@ -53,6 +58,7 @@ EditText etNumOfThreeShoot , etNumOfShootsPaint , etNumOfShootsFreeThrow , etNum
                Integer numberOfExtensionsShoots = Integer.parseInt(etNumOfShootsExtensions.getText().toString());
                result.putExtra("numberOfExtensionsShoots", numberOfExtensionsShoots);
 
+               // send result to the ShootingActivity
                setResult(Activity.RESULT_OK, result);
                finish();
 

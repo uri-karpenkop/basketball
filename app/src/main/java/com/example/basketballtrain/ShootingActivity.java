@@ -70,6 +70,7 @@ public class ShootingActivity extends AppCompatActivity {
     }
 
     @Override
+    // called when returning back from survey
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Integer numberOfThreeShoots = data.getIntExtra("numberOfThreeShoots", 0);

@@ -30,7 +30,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
+public class ProfileActivity extends AppCompatActivity {
 
     SharedPreferences sp;
     Button btnCreateProfile, btnTakePic;
@@ -71,7 +71,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         Profile userProfile = new Profile(userName, firstName, lastName, email, phoneNumber, pathToPic);
 
 
-        // set fields with data
+        // show the data on the screen
         etUserName.setText(userProfile.getUserName());
         etFirstName.setText(userProfile.getFirstName());
         etLastName.setText(userProfile.getLastName());
@@ -83,8 +83,20 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             loadImageFromStorage(userProfile.getPathToPicture());
         }
 
+        // find the TAKE PIC button
         btnTakePic = (Button)findViewById(R.id.btnTakePic);
-        btnTakePic.setOnClickListener(this);
+        btnTakePic.setOnClickListener(new View.OnClickListener() {
+            // TAKE PICTURE button
+            @Override
+            public void onClick(View v)
+            {
+                if(v==btnTakePic)
+                {
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent,0);
+                }
+            }
+        });
 
         // save
         btnCreateProfile = (Button) findViewById(R.id.btnCreateProfile);
@@ -113,18 +125,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-    }
-
-    @Override
-
-    // TAKE PICTURE button
-    public void onClick(View v)
-    {
-        if(v==btnTakePic)
-        {
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent,0);
-        }
     }
 
     @Override
